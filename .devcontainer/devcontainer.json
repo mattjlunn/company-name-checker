@@ -1,17 +1,17 @@
 {
-  "name": "python-uv-dev",
-  "image": "mcr.microsoft.com/devcontainers/python:3",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "name": "python-uv-dev",
+    "image": "mcr.microsoft.com/devcontainers/python:3",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
-  "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {},
-  },
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {}
+    },
 
-  "appPort": [8000],
+    "appPort": [8000],
 
-  "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh",
+    "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && uv sync",
 
-  "containerEnv": {
-    "PYTHONUNBUFFERED": "1",
-  },
+    "containerEnv": {
+        "PYTHONUNBUFFERED": "1"
+    }
 }
