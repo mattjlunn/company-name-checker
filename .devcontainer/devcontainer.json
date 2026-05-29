@@ -1,0 +1,17 @@
+{
+  "name": "python-uv-dev",
+  "image": "mcr.microsoft.com/devcontainers/python:3",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+  },
+
+  "appPort": [8000],
+
+  "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh",
+
+  "containerEnv": {
+    "PYTHONUNBUFFERED": "1",
+  },
+}
